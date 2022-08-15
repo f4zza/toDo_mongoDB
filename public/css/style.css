@@ -5,3 +5,10 @@ h1{
     color: gray;
     text-decoration: line-through;
 }
+ul {
+    color: black;
+    list-style: disc;
+}
+.fa-trash{
+    color: rosybrown;
+}
