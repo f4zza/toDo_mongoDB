@@ -18,7 +18,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Todo List: </h1>
+    <h1>ToDo List: </h1>
     <ul class="todoItems">
     <% for(let i=0; i < items.length; i++) {%>
         <li class="item">
@@ -34,11 +34,11 @@
 
     <h2>Pending Tasks: <%= left %></h2>
 
-    <h2>Add A Todo:</h2>
+    <h2>Add An Item:</h2>
 
     <form action="/addTodo" method="POST">
-        <input type="text" placeholder="Thing To Do" name="todoItem">
-        <input type="submit">
+        <input type="text" class="input" placeholder="Thing To Do" name="todoItem" required>
+        <input type="submit" class="submit">
     </form>
     
 
