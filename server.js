@@ -38,7 +38,7 @@ app.get('/',async (request, response)=>{
 app.post('/addTodo', (request, response) => {
     db.collection('todos').insertOne({thing: request.body.todoItem, completed: false})
     .then(result => {
-        console.log('Todo Added')
+        console.log('Item Added')
         response.redirect('/')
     })
     .catch(error => console.error(error))
@@ -81,8 +81,8 @@ app.put('/markUnComplete', (request, response) => {
 app.delete('/deleteItem', (request, response) => {
     db.collection('todos').deleteOne({thing: request.body.itemFromJS})
     .then(result => {
-        console.log('Todo Deleted')
-        response.json('Todo Deleted')
+        console.log('Item Deleted')
+        response.json('Item Deleted')
     })
     .catch(error => console.error(error))
 
